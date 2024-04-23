@@ -1,5 +1,5 @@
 # Implementing-LL-1-Parser-for-Given-Grammar
-LL(1) Parser Implementation**
+**LL(1) Parser Implementation**
 
 This repository contains a C++ program implementing an LL(1) parser for a specific grammar. The LL(1) parser determines whether a given input string belongs to the language defined by the grammar.
 
