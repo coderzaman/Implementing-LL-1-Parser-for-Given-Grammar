@@ -14,14 +14,15 @@ int main() {
     string input = line+"$";
     cout << "Stack         " <<"      Input:" << endl;
     bool ok = true;
-    int y = 0;
+    int checker = 0;
     while (ok)
     {
         cout << stack << "                   " << input  <<endl;
         if(stack == "$" || input == "$"){
+            cout << endl << "Accepted" << endl;
             break;
         }else if(stack[0] == input[0]){
-            stack.erase(0, 1);
+            stack.erase(0, 1); 
             input.erase(0, 1);
         }else if(input == "x$"){
             stack.erase(0, 1);
@@ -31,9 +32,10 @@ int main() {
         }else if(stack[0] == 'Y'){
             stack.erase(0, 1);
             stack = productions['Y'][0] + stack;
+        }else {
+            cout << endl << "Not Accepted"  << endl;
+            break;
         }
-        y++;
-
     }
     return 0;
 }
